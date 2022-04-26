@@ -22,7 +22,8 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 			"/oauth/authorize**",
 			"login**", 
 			"/error**",
-			"/.well-known/jwks.json"
+			"/.well-known/jwks.json",
+			"/oauth/token**"
 	};
 
 	@Autowired
