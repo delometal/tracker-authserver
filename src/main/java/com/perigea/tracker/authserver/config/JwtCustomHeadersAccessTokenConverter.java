@@ -38,10 +38,11 @@ public class JwtCustomHeadersAccessTokenConverter extends JwtAccessTokenConverte
 		AuthUser user = (AuthUser) authentication.getPrincipal();
 		Map<String, Object> info = new LinkedHashMap<String, Object>(accessToken.getAdditionalInformation());
 
-		info.put("email", user.getUsername());
+		info.put("username", user.getUsername());
 		info.put("name", user.getNome());
 		info.put("lastname", user.getCognome());
 		info.put("type", user.getTipo());
+		info.put("email", user.getEmail());
 
 		DefaultOAuth2AccessToken customAccessToken = new DefaultOAuth2AccessToken(accessToken);
 		customAccessToken.setAdditionalInformation(info);
