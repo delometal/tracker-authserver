@@ -20,7 +20,8 @@ import lombok.EqualsAndHashCode;
 public class AuthUser implements Serializable, UserDetails {
 
 	private static final long serialVersionUID = 4555043952496375034L;
-
+	
+	private String codicePersona;
 	private String username;
 	private String nome;
 	private String cognome;
